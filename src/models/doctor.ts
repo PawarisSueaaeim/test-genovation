@@ -18,4 +18,4 @@ const doctorSchema: Schema = new Schema({
     specialty: { type: String, required: true },
 });
 
-export default mongoose.model<IDoctor>("Doctor", doctorSchema);
+export default mongoose.model<IDoctor>("doctor", doctorSchema);

@@ -1,9 +1,11 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 
-dotenv.config();
 
-const connectDB = async () => {
+export const connectDB = async () => {
+    dotenv.config({
+        path: "./.env",
+    });
     const HOST = process.env.DATABASE_HOST;
     const POST = process.env.DATABASE_PORT;
     const COLLECTION = process.env.DATABASE_COLLECTION;
@@ -17,5 +19,5 @@ const connectDB = async () => {
     }
 }
 
-export default connectDB;
+module.exports = connectDB;
 

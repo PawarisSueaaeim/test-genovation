@@ -2,6 +2,10 @@
   "name": "test-genovation",
   "version": "1.0.0",
   "type": "module",
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "esModuleInterop": true
+  },
   "scripts": {
     "dev": "nodemon --stage local",
     "start": "nodemon --loader ts-node/esm src/index.ts",
@@ -21,7 +25,9 @@
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
+    "@types/morgan": "^1.9.9",
     "@types/node": "^22.13.10",
     "nodemon": "^3.1.9",
     "typescript": "^5.8.2"
